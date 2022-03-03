@@ -52,8 +52,8 @@ modules:
   sources:
   - type: git
     url: https://github.com/coelckers/raze.git
-    tag: 1.1.2
-    commit: d26d3f051341e5c4cc487050c1f144ae168396cb
+    tag: 1.4.1
+    commit: c756ce7ef80cf39912e61d71928236146a94f87b
   post-install:
   - install -Dm 644 soundfont/raze.sf2 /app/share/sounds/sf2/raze.sf2
 
