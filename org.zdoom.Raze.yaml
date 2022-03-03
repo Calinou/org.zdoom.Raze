@@ -2,7 +2,7 @@ app-id: org.zdoom.Raze
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
 runtime-version: "21.08"
-command: raze.sh
+command: raze
 
 finish-args:
 - --device=dri
@@ -54,16 +54,14 @@ modules:
     url: https://github.com/coelckers/raze.git
     tag: 1.4.1
     commit: c756ce7ef80cf39912e61d71928236146a94f87b
+  - type: patch
+    path: raze-flatpak-paths.patch
   post-install:
-  - install -Dm 644 soundfont/raze.sf2 /app/share/sounds/sf2/raze.sf2
+  - install -Dm 644 soundfont/raze.sf2 /app/share/games/raze/soundfonts/raze.sf2
 
-- name: launcher
+- name: integration
   buildsystem: simple
   sources:
-  - type: script
-    commands:
-    - raze +fluid_patchset /app/share/sounds/sf2/raze.sf2 "$@"
-    dest-filename: raze.sh
   - type: file
     path: org.zdoom.Raze.desktop
   - type: file
@@ -77,7 +75,6 @@ modules:
   - type: file
     path: org.zdoom.Raze.256.png
   build-commands:
-  - install -D raze.sh /app/bin/raze.sh
   - install -Dm 644 org.zdoom.Raze.desktop -t /app/share/applications
   - install -Dm 644 org.zdoom.Raze.appdata.xml -t /app/share/metainfo
   - install -Dm 644 org.zdoom.Raze.32.png /app/share/icons/hicolor/32x32/apps/org.zdoom.Raze.png
