@@ -27,9 +27,6 @@
     <p>
       In addition to Duke Nukem 3D, Raze supports Blood, Redneck Rampage, Powerslave/Exhumed, NAM and WW2 GI. Meet the entire Build engine family!
     </p>
-    <ul>
-      <li>TODO</li>
-    </ul>
     <p>
       Commercial data files are required to run the supported games. For more info about all supported games and their data files, see: Help -> List of supported games.
     </p>
@@ -38,14 +35,14 @@
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/flathub/org.zdoom.GZDoom/master/images/image_01.png</image>
-      <caption>REPLACE ME</caption>
+      <caption>TODO: Replace this image</caption>
     </screenshot>
   </screenshots>
 
   <releases>
     <release version="1.4.1" date="2022-01-22">
       <description>
-        <p>First release of Raze on Flatpak.</p>
+        <p>First release of Raze on Flatpak. TODO: Update this release information</p>
       </description>
     </release>
   </releases>
